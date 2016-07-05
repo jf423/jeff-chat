@@ -1,5 +1,4 @@
-// console.log('Hello World!');
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 // import Firebase from 'firebase';
 // import ReactFireMixin from 'reactfire';
@@ -74,7 +73,7 @@ var ChatClient = React.createClass({
     this.firebaseRefs.messages.push(newMessage);
   },
   componentWillMount: function() {
-    this.bindAsArray(new Firebase('https://ultimate-donut.firebaseio.com/egghead/react/intro/messages'), 'messages');
+    this.bindAsArray(new Firebase('https://jeff-chat.firebaseio.com'), 'messages');
   },
   render: function() {
     return (
